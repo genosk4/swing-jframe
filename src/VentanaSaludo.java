@@ -34,7 +34,12 @@ public class VentanaSaludo {
 
         botonSaludar.addActionListener(e -> {
             String nombre = campoTexto.getText();
-            etiquetaSaludo.setText("Hola: " + nombre);
+            if (nombre.trim().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Por favor ingresa tu nombre. ");
+            } else {
+                etiquetaSaludo.setText("Hola: " + nombre);
+            }
+
 
         });
     }
