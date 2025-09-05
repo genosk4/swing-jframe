@@ -11,7 +11,7 @@ public class VentanaSaludo {
     private JLabel etiquetaSaludo;
     private JButton botonLimpiar;
 
-
+    // Main
     public static void main(String[] args) {
         VentanaSaludo aplicacion = new VentanaSaludo();
         aplicacion.Visual();
@@ -20,7 +20,7 @@ public class VentanaSaludo {
     }
 
     //Define el tamaño, fuente y color de la ventana
-    public void Visual() {
+    private void Visual() {
 
         ventana = new JFrame("App de Saludo ICC490");
         ventana.setSize(500, 300);
@@ -47,9 +47,9 @@ public class VentanaSaludo {
     }
 
     // Hace que el boton funcione, que se pueda usar
-    public void eventoBoton() {
+    private void eventoBoton() {
 
-        botonSaludar.addActionListener(e -> {
+        botonSaludar.addActionListener(_ -> {
             String nombre = campoTexto.getText();
             Usuario usuario = new Usuario(nombre);
             if (nombre.trim().isEmpty()) {
@@ -65,14 +65,14 @@ public class VentanaSaludo {
                 }
             }
         });
-        botonLimpiar.addActionListener(e -> {
+        botonLimpiar.addActionListener(_ -> {
             campoTexto.setText("");
             etiquetaSaludo.setText(" ");
         });
     }
 
     // agrega los botones, texto a la ventana
-    public void agregarVentana() {
+    private void agregarVentana() {
         ventana.add(campoTexto);
         ventana.add(botonSaludar);
         ventana.add(botonLimpiar);
