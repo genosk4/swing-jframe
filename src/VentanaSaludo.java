@@ -24,6 +24,14 @@ public class VentanaSaludo {
         campoTexto = new JTextField();
         campoTexto.setBounds(50, 30, 200, 25);
 
+        campoTexto.addKeyListener(new KeyAdapter() {
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    botonSaludar.doClick();
+                }
+            }
+        });
+
         botonSaludar = new JButton("Saludar");
         botonSaludar.setBounds(270, 30, 100, 25);
 
