@@ -27,22 +27,30 @@ public class VentanaSaludo {
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setLayout(null);
 
-        ventana.getContentPane().setBackground(new Color(177, 177, 177));
+        ventana.getContentPane().setBackground(new Color(255, 255, 240));
 
         campoTexto = new JTextField();
         campoTexto.setBounds(50, 30, 200, 25);
         campoTexto.setFont(new Font("Arial", Font.PLAIN, 16));
+        campoTexto.setBackground(new Color(255, 255, 240));
+
 
 
         botonSaludar = new JButton("Saludar");
         botonSaludar.setBounds(270, 30, 100, 25);
         botonSaludar.setFont(new Font("Inter", Font.BOLD, 14));
+        botonSaludar.setBackground(new Color(129, 181, 119));
+        botonSaludar.setBorder(BorderFactory.createRaisedBevelBorder());
+        botonSaludar.setCursor(new Cursor(Cursor.HAND_CURSOR));
         etiquetaSaludo = new JLabel(" ");
         etiquetaSaludo.setBounds(50, 80, 300, 25);
 
         botonLimpiar = new JButton("Limpiar");
         botonLimpiar.setBounds(270, 80, 100, 25);
         botonLimpiar.setFont(new Font("Inter", Font.BOLD, 14));
+        botonLimpiar.setBackground(new Color(129, 181, 119));
+        botonLimpiar.setBorder(BorderFactory.createRaisedBevelBorder());
+        botonLimpiar.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
     }
 
