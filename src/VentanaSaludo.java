@@ -11,7 +11,6 @@ public class VentanaSaludo {
         });
     }
 
-
     public void componenteVisual() {
         JTextField campoTexto = new JTextField();
         campoTexto.setBounds(50, 30, 200, 25);
