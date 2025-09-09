@@ -3,16 +3,13 @@ public class Usuario {
     private String username;
     private String password;
 
-    public Usuario(String nombre) {
-        this.nombre = nombre;
-    }
-    public String getSaludo() {
-        return "Hola: " + nombre;
-    }
     public Usuario(String username,String password, String nombre) {
         this.username = username;
         this.password = password;
         this.nombre = nombre;
+    }
+    public String getSaludo() {
+        return "Hola: " + nombre;
     }
 
     public boolean validarCredenciales(String u, String p) {
