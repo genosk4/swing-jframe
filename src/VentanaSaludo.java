@@ -11,13 +11,13 @@ public class VentanaSaludo {
     private JLabel etiquetaSaludo;
     private JButton botonLimpiar;
 
-    // Main
-    public static void main(String[] args) {
-        VentanaSaludo aplicacion = new VentanaSaludo();
-        aplicacion.Visual();
-        aplicacion.eventoBoton();
-        aplicacion.agregarVentana();
+
+    public void iniciar() {
+        Visual();
+        eventoBoton();
+        agregarVentana();
     }
+
 
     //Define el tamaño, fuente y color de la ventana
     private void Visual() {
@@ -59,11 +59,10 @@ public class VentanaSaludo {
 
         botonSaludar.addActionListener(_ -> {
             String nombre = campoTexto.getText();
-            Usuario usuario = new Usuario(nombre);
             if (nombre.trim().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Por favor ingresa tu nombre. ");
             } else {
-                etiquetaSaludo.setText(usuario.getSaludo());
+                etiquetaSaludo.setText("Hola: " + nombre);
             }
         });
         campoTexto.addKeyListener(new KeyAdapter() {
