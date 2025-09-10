@@ -15,6 +15,7 @@ public class VentanaLogin {
     private final JLabel lblClave = new JLabel("Clave:");
     private final JPasswordField txtClave = new JPasswordField();
     private final JButton btnIngresar = new JButton("Ingresar");
+    private final JButton btnRegistrar = new JButton("Registrar");
 
 
     public VentanaLogin() {
@@ -24,7 +25,7 @@ public class VentanaLogin {
     }
 
     private void inicializarUsuarios() {
-        USUARIOS.add(new Usuario("daniel", "1111", "Daniel Lincopi"));
+        USUARIOS.add(new Usuario("daniel", "1234", "Daniel Lincopi"));
     }
 
     private void inicializarVentana() {
@@ -34,17 +35,18 @@ public class VentanaLogin {
         frame. setLocationRelativeTo(null);
 
         lblUsuario.setBounds(30, 30, 80, 25);
-        txtUsuario.setBounds(120, 30, 130, 25);
+        txtUsuario.setBounds(120, 30, 200, 25);
         lblClave.setBounds(30, 70, 80, 25);
-        txtClave.setBounds(120, 70, 130, 25);
+        txtClave.setBounds(120, 70, 200, 25);
         btnIngresar.setBounds(40, 120, 100, 30);
-
+        btnRegistrar.setBounds(160, 120, 180, 30);
 
         frame.add(lblUsuario);
         frame.add(txtUsuario);
         frame.add(lblClave);
         frame.add(txtClave);
         frame.add(btnIngresar);
+        frame.add(btnRegistrar);
 
 
     }
@@ -63,6 +65,12 @@ public class VentanaLogin {
                 JOptionPane.showMessageDialog(frame,
                         "Usuario o clave incorrectos");
             }
+        });
+
+        btnRegistrar.addActionListener(e -> {
+            frame.dispose();
+            VentanaRegistro registro = new VentanaRegistro();
+            registro.mostrarVentana();
         });
     }
 

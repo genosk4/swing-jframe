@@ -65,8 +65,7 @@ public class VentanaRegistro {
 
 
             JOptionPane.showMessageDialog(frame,
-                    "Usuario registrado exitosamente."
-                            ,
+                    "Usuario registrado exitosamente.",
                     "Registro exitoso",
                     JOptionPane.INFORMATION_MESSAGE);
 
