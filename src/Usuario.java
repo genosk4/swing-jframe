@@ -8,9 +8,6 @@ public class Usuario {
         this.password = password;
         this.nombre = nombre;
     }
-    public String getSaludo() {
-        return "Hola: " + nombre;
-    }
 
     public boolean validarCredenciales(String u, String p) {
         return this.username.equals(u) && this.password.equals(p);
@@ -20,5 +17,7 @@ public class Usuario {
         return nombre;
     }
 
-
+    public String getUsername() {
+        return username;
+    }
 }
