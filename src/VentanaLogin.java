@@ -55,7 +55,7 @@ public class VentanaLogin {
             String usuarioIngresado = txtUsuario.getText();
             String claveIngresada = new String(txtClave.getPassword());
 
-            if (!validarCredenciales(usuarioIngresado, claveIngresada).isEmpty()) {
+            if (!validarDatos(usuarioIngresado, claveIngresada).isEmpty()) {
                 JOptionPane.showMessageDialog(frame, "Login exitoso");
                 frame.dispose();
 
@@ -79,7 +79,7 @@ public class VentanaLogin {
     }
 
 
-    private String validarCredenciales(String u, String p) {
+    private String validarDatos(String u, String p) {
         for (Usuario user : USUARIOS) {
             if (user.validarCredenciales(u, p)) {
                 return user.getNombre();
